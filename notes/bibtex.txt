@@ -1,0 +1,63 @@
+-*- outline -*-
+
+* Type
+Journal Article
+Publication in Conference Proceedings
+Conference or Workshop Proceedings
+Technical Report
+Miscellaneous
+Book
+Part of a Book
+Part of a Book with own Title
+PhD Thesis
+Master's Thesis
+Unpublish Material
+Manual
+Booklet
+
+* Id
+
+* Title
+Title
+Book Title
+Series
+
+* Author/Editor
+Author / and others (et al.)
+Editor
+
+* Publication
+Journal
+Volume
+Number/Issue
+Month
+Year
+Pages
+Edition
+Chapter
+Organization
+Publisher
+School
+Institution
+Location
+Address
+ISBN
+ISSN
+How Published
+Cross-reference
+
+* Misc
+Type
+Key
+Note
+Abstract
+Keywords
+Color
+
+* External
+links
+
+* Other Fields
+Name / Content
+
+* End

@@ -1,0 +1,32 @@
+-*- outline -*-
+
+* RootPath
+path
+join
+walk file / directory
+find_file
+is_on_nfs
+relative
+absolut
+
+* Walk
+walk from directory and yield file or directory
+
+* File
+path
+filename
+extension
+mimetype lazy
+inode
+shasum lazy
+
+* Mimetype
+.pdf -> application/pdf -> PdfMimeType
+%PDF-1.4
+f.read(10).startswith('%PDF-')
+
+* inode
+stat_info = os.stat(file)
+stat_info.st_ino
+
+* End

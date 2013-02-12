@@ -1,0 +1,156 @@
+-*- outline -*-
+
+print mendeley and bibtex, dolphin, gwenview screenshot
+
+* **************************************************************************************************
+* 
+* Features
+* 
+* **************************************************************************************************
+
+* **************************************************************************************************
+
+* Versus GED
+workflow
+access right
+history
+
+* **************************************************************************************************
+
+* Data Input
+bibtex file/input
+RDF file/input
+PDF (recursive scan, drag-and-drop)
+Manual
+
+* **************************************************************************************************
+
+* Drag-and-Drop
+extract metadata from the file/folder and insert the records
+http://qt-project.org/doc/qt-4.8/examples-draganddrop.html
+http://www.qtcentre.org/threads/18814-drag-and-drop-from-outside-qt-application
+
+* **************************************************************************************************
+
+* PDF Data Extraction
+** metadata
+** pdf to text and then perform a word analysis
+title, authors, journal, doi, abstract, references
+
+word with count > 10 and not in basic corpus
+
+find a way to define basic corpus: take a large set of document covering a large set of topics and
+exclude most present word.
+
+* **************************************************************************************************
+
+* Portable Database
+rsync files between host
+
+* Database Synchronisation
+host1 <-> host2
+=> journal to record data insertion, update and deletion
+
+* Remote Database
+to provide metadata and files
+
+* **************************************************************************************************
+
+* History
+cf. database synchronisation
+
+* **************************************************************************************************
+
+* Data Sharing With Peers
+keep confidentiality
+** Peer to Peer Protocol
+Host1 -> Server <- Host2
+Host1 <-> Host2
+** Exchange Data by Email
+copy-paste XML
+XML attachment and open with
+IMAP Folder
+
+* **************************************************************************************************
+
+* Client-Server
+from contextual menu
+
+* **************************************************************************************************
+
+* File Storage
+key (shasum) index file hiearchy AB/CDEFGHIJ
+other hiearchies: journal/author etc.
+
+** Storage Sync
+*** How to discover a new file / independently of its name
+use file attribute to register checksum
+use inode to register file
+else use file name, path -or- recompute checksum
+
+** file attribute
+Not supported on NFS !
+
+> setfattr -n user.sha -v 1234 file1 
+setfattr: file1: Operation not supported
+
+> attr -s sha -V 1234 file1 
+attr_set: Operation not supported
+Could not set "sha" for file1
+
+** Register and track Inode
+stable over move and nfs, but not over file system move
+
+** Monitor File Hierarchy / INOTIFY(7)
+add, delete, move and rename
+
+http://inotify.aiken.cz/?section=inotify&page=faq
+
+https://github.com/seb-m/pyinotify
+python -m pyinotify -v /tmp
+
+Not supported on NFS ? Only event from host running inotify ?
+
+** Shasum Hiearchy + Hard Link
+
+* **************************************************************************************************
+
+* File Name Renaming
+select a template and rename the file/folder
+
+* **************************************************************************************************
+
+* Search for Duplicate
+PDF shasum 
+onthology similarity
+
+* **************************************************************************************************
+
+* Check links
+perform a recursive search to retrieve a file
+build a shasum / filename directory and check
+
+* **************************************************************************************************
+
+* Folder Hiearchy
+** Tree View
+complete view
+partial view
+** Folder Icon
+don't reimplement file explorer, KDE widget ?
+** Navigation bar
+|>|folder0|>|folder1|>|folder2|>|Text Input
+-> Text Input|Clear| cf. KDE Widget ?
+
+* **************************************************************************************************
+
+* Record View
+table author / title etc.
+folder view
+MVC on top of the ontology
+
+* **************************************************************************************************
+* 
+* End
+* 
+* **************************************************************************************************

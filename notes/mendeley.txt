@@ -1,0 +1,132 @@
+-*- outline -*-
+
+* Bibtex export
+don't tell the corresponding group
+
+* Tracking
+don't track file move
+
+* Groupe
+can't distinguish parent/child folder contents since it merges the childs into the parent folder.
+
+* Database
+encrypted
+
+* No image preview
+
+* API
+
+* GUI Design
+** menu
+*** File
+Add Files
+Add Folder
+Watch Folder
+Add Entry Manually
+---
+Import
+Export
+Send by Email
+Merge Documents
+---
+Delete Documents
+Remove from Collection
+Rename Documents Files
+---
+Synchronize Library
+---
+Quit
+*** Edit
+Undo
+Redo
+---
+Find
+---
+Cut
+Copy
+Copy Citation
+Copy LaTeX Citation
+Paste
+---
+Select All
+---
+New Folder
+New Group
+Rename Folder
+---
+Remove Folder
+*** View
+Library as Table
+Library as Citation
+---
+Citation Style
+---
+Toolbar Layout
+Show Document Details
+*** Tools
+Invite Colleagues
+---
+Install Web.LibreOffice Plugin
+---
+Check for Duplicates
+---
+Options
+*** Help
+Create Backup
+Restore Backup
+** toolbar
+add files
+folders +/-
+share
+sync
+search: authors, title, publication names, year, notes
+** generic folder view
+virtual folder
+action: rename, new, remove
+*** all documents
+*** recently added
+*** favorites
+*** need reviews
+*** my publication
+*** unsorted
+*** folders
+*** groups 
+*** Trash
+** Filter
+** Table View
+favorite, read, file attached, authors, title, year, published in, added
+
+Open File
+Open File Externally
+Open Folder
+---
+Renames Documents Files
+Merge Documents
+Mark as: bool read, favorite, need review
+---
+cf. menu
+** Details
+*** type
+*** title
+*** authors
+*** journal
+*** year
+*** volume
+*** issue
+*** pages
+*** abstract
+*** tags
+*** keywords
+*** url
+*** catalogs id: ArXiv id, DOI, PMID
+*** files
+*** other settings
+** Notes
+comment
+annotations
+** Status bar
+filter
+share
+number of documents selected
+
+* End
