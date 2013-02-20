@@ -1,0 +1,6 @@
+https://github.com/seb-m/pyinotify/wiki/Tutorial
+
+http://www.qtcentre.org/threads/39839-QTextBrowser-height-adjusted-to-content
+http://doc.qt.digia.com/qq/qq04-height-for-width.html
+http://stackoverflow.com/questions/11851020/a-qwidget-like-qtextedit-that-wraps-its-height-automatically-to-its-contents/11858803#11858803
+
