@@ -1,0 +1,19 @@
+-*- outline -*-
+
+* Bibtex export
+don't tell the corresponding group
+
+* Tracking
+don't track file move
+
+* Groupe
+can't distinguish parent/child folder contents since it merges the childs into the parent folder.
+
+* Database
+encrypted
+
+* No image preview
+
+* API
+
+* End
