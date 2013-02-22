@@ -1,9 +1,13 @@
 #! /usr/bin/env python
+
 """
 This module provides classes for querying Google Scholar and parsing
 returned results.  It currently *only* processes the first results
 page.  It is not a recursive crawler.
 """
+
+####################################################################################################
+#
 # Version: 1.5 -- $Date: 2012-09-27 10:44:39 -0700 (Thu, 27 Sep 2012) $
 #
 # ChangeLog
@@ -58,20 +62,31 @@ page.  It is not a recursive crawler.
 # STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
 # IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
+#
+####################################################################################################
 
 import optparse
 import sys
 import re
 import urllib
 import urllib2
+
+# /usr/lib/python2.7/site-packages/BeautifulSoup-3.2.1-py2.7.egg-info
+# /usr/lib/python2.7/site-packages/BeautifulSoup.py
 from BeautifulSoup import BeautifulSoup
 
+####################################################################################################
+
 class Article():
+
+    """ A class representing articles listed on Google Scholar.  The class provides basic
+    dictionary-like behavior.
     """
-    A class representing articles listed on Google Scholar.  The class
-    provides basic dictionary-like behavior.
-    """
+
+    ##############################################
+
     def __init__(self):
+
         self.attrs = {'title':         [None, 'Title',          0],
                       'url':           [None, 'URL',            1],
                       'num_citations': [0,    'Citations',      2],
@@ -80,30 +95,47 @@ class Article():
                       'url_versions':  [None, 'Versions list',  5],
                       'year':          [None, 'Year',           6]}
 
+    ##############################################
+
     def __getitem__(self, key):
+
         if key in self.attrs:
             return self.attrs[key][0]
+
         return None
 
+    ##############################################
+
     def __setitem__(self, key, item):
+
         if key in self.attrs:
             self.attrs[key][0] = item
         else:
             self.attrs[key] = [item, key, len(self.attrs)]
 
+    ##############################################
+
     def __delitem__(self, key):
+
         if key in self.attrs:
             del self.attrs[key]
 
+    ##############################################
+
     def as_txt(self):
+
         # Get items sorted in specified order:
         items = sorted(self.attrs.values(), key=lambda item: item[2])
         # Find largest label length:
         max_label_len = max([len(str(item[1])) for item in items])
         fmt = '%%%ds %%s' % max_label_len
+
         return '\n'.join([fmt % (item[1], item[0]) for item in items])
 
+    ##############################################
+
     def as_csv(self, header=False, sep='|'):
+
         # Get keys sorted in specified order:
         keys = [pair[0] for pair in \
                     sorted([(key, val[2]) for key, val in self.attrs.items()],
@@ -112,36 +144,50 @@ class Article():
         if header:
             res.append(sep.join(keys))
         res.append(sep.join([unicode(self.attrs[key][0]) for key in keys]))
+
         return '\n'.join(res)
 
+####################################################################################################
+
 class ScholarParser():
+
+    """ ScholarParser can parse HTML document strings obtained from Google Scholar. It invokes the
+    handle_article() callback on each article that was parsed successfully.
     """
-    ScholarParser can parse HTML document strings obtained from Google
-    Scholar. It invokes the handle_article() callback on each article
-    that was parsed successfully.
-    """
+
     SCHOLAR_SITE = 'http://scholar.google.com'
 
+    ##############################################
+
     def __init__(self, site=None):
+
         self.soup = None
         self.article = None
         self.site = site or self.SCHOLAR_SITE
         self.year_re = re.compile(r'\b(?:20|19)\d{2}\b')
 
-    def handle_article(self, art):
-        """
-        In this base class, the callback does nothing.
+    ##############################################
+
+    def handle_article(self, article):
+
+        """ In this base class, the callback does nothing.
         """
 
+    ##############################################
+
     def parse(self, html):
+
+        """ This method initiates parsing of HTML content.
         """
-        This method initiates parsing of HTML content.
-        """
+
         self.soup = BeautifulSoup(html)
         for div in self.soup.findAll(ScholarParser._tag_checker):
             self._parse_article(div)
 
+    ##############################################
+
     def _parse_article(self, div):
+
         self.article = Article()
 
         for tag in div:
@@ -163,7 +209,10 @@ class ScholarParser():
         if self.article['title']:
             self.handle_article(self.article)
 
+    ##############################################
+
     def _parse_links(self, span):
+
         for tag in span:
             if not hasattr(tag, 'name'):
                 continue
@@ -182,32 +231,46 @@ class ScholarParser():
                         self._as_int(tag.string.split()[1])
                 self.article['url_versions'] = self._path2url(tag.get('href'))
 
+    ##############################################
+
     @staticmethod
     def _tag_checker(tag):
-        if tag.name == 'div' and tag.get('class') == 'gs_r':
-            return True
-        return False
+
+        return tag.name == 'div' and tag.get('class') == 'gs_r'
+
+    ##############################################
 
     def _as_int(self, obj):
+
         try:
             return int(obj)
         except ValueError:
             return None
 
+    ##############################################
+
     def _path2url(self, path):
+
         if path.startswith('http://'):
             return path
-        if not path.startswith('/'):
-            path = '/' + path
-        return self.site + path
+        else:
+            if not path.startswith('/'):
+                path = '/' + path
+            return self.site + path
+
+####################################################################################################
 
 class ScholarParser120201(ScholarParser):
+
     """
     This class reflects update to the Scholar results page layout that
     Google recently.
     """
 
+    ##############################################
+
     def _parse_article(self, div):
+
         self.article = Article()
 
         for tag in div:
@@ -228,13 +291,19 @@ class ScholarParser120201(ScholarParser):
         if self.article['title']:
             self.handle_article(self.article)
 
+####################################################################################################
+
 class ScholarParser120726(ScholarParser):
+
     """
     This class reflects update to the Scholar results page layout that
     Google made 07/26/12.
     """
 
+    ##############################################
+
     def _parse_article(self, div):
+
         self.article = Article()
 
         for tag in div:
@@ -256,15 +325,17 @@ class ScholarParser120726(ScholarParser):
         if self.article['title']:
             self.handle_article(self.article)
 
+####################################################################################################
 
 class ScholarQuerier():
-    """
-    ScholarQuerier instances can conduct a search on Google Scholar
-    with subsequent parsing of the resulting HTML content.  The
-    articles found are collected in the articles member, a list of
+
+    """ ScholarQuerier instances can conduct a search on Google Scholar with subsequent parsing of
+    the resulting HTML content.  The articles found are collected in the articles member, a list of
     Article instances.
     """
+
     SCHOLAR_URL = 'http://scholar.google.com/scholar?hl=en&q=%(query)s+author:%(author)s&btnG=Search&as_subj=eng&as_sdt=1,5&as_ylo=&as_vis=0'
+
     NOAUTH_URL = 'http://scholar.google.com/scholar?hl=en&q=%(query)s&btnG=Search&as_subj=eng&as_std=1,5&as_ylo=&as_vis=0'
 
     """
@@ -274,15 +345,21 @@ class ScholarQuerier():
 
     UA = 'Mozilla/5.0 (X11; U; FreeBSD i386; en-US; rv:1.9.2.9) Gecko/20100913 Firefox/3.6.9'
 
+    ##############################################
+
     class Parser(ScholarParser120726):
+
         def __init__(self, querier):
             ScholarParser.__init__(self)
             self.querier = querier
 
-        def handle_article(self, art):
-            self.querier.add_article(art)
+        def handle_article(self, article):
+            self.querier.add_article(article)
+
+    ##############################################
 
     def __init__(self, author='', scholar_url=None, count=0):
+
         self.articles = []
         self.author = author
         # Clip to 100, as Google doesn't support more anyway
@@ -296,51 +373,68 @@ class ScholarQuerier():
         if self.count != 0:
             self.scholar_url += '&num=%d' % self.count
 
+    ##############################################
+
     def query(self, search):
+
         """
         This method initiates a query with subsequent parsing of the
         response.
         """
-        url = self.scholar_url % {'query': urllib.quote(search.encode('utf-8')), 'author': urllib.quote(self.author)}
-        req = urllib2.Request(url=url,
-                              headers={'User-Agent': self.UA})
+
+        url = self.scholar_url % {'query': urllib.quote(search.encode('utf-8')),
+                                  'author': urllib.quote(self.author)}
+        req = urllib2.Request(url=url, headers={'User-Agent': self.UA})
         hdl = urllib2.urlopen(req)
         html = hdl.read()
         self.parse(html)
 
+    ##############################################
+
     def parse(self, html):
+
         """
         This method allows parsing of existing HTML content.
         """
+
         parser = self.Parser(self)
         parser.parse(html)
 
-    def add_article(self, art):
-        self.articles.append(art)
+    ##############################################
 
+    def add_article(self, article):
+        self.articles.append(article)
 
+####################################################################################################
 
 def txt(query, author, count):
+
     querier = ScholarQuerier(author=author, count=count)
     querier.query(query)
     articles = querier.articles
     if count > 0:
         articles = articles[:count]
-    for art in articles:
-        print art.as_txt() + '\n'
+    for article in articles:
+        print article.as_txt() + '\n'
+
+####################################################################################################
 
 def csv(query, author, count, header=False, sep='|'):
+
     querier = ScholarQuerier(author=author, count=count)
     querier.query(query)
     articles = querier.articles
     if count > 0:
         articles = articles[:count]
-    for art in articles:
-        result = art.as_csv(header=header, sep=sep)
+    for article in articles:
+        result = article.as_csv(header=header, sep=sep)
         print result.encode('utf-8')
         header = False
 
+####################################################################################################
+
 def url(title, author):
+
     querier = ScholarQuerier(author=author)
     querier.query(title)
     articles = querier.articles
@@ -349,7 +443,10 @@ def url(title, author):
             return article['url'], article['year']
     return None, None
 
+####################################################################################################
+
 def titles(author):
+
     querier = ScholarQuerier(author=author)
     querier.query('')
     articles = querier.articles
@@ -358,12 +455,14 @@ def titles(author):
       titles.append(article['title'])
     return titles
 
+####################################################################################################
+
 def main():
+
     usage = """scholar.py [options] <query string>
 A command-line interface to Google Scholar."""
 
-    fmt = optparse.IndentedHelpFormatter(max_help_position=50,
-                                         width=100)
+    fmt = optparse.IndentedHelpFormatter(max_help_position=50, width=100)
     parser = optparse.OptionParser(usage=usage, formatter=fmt)
     parser.add_option('-a', '--author',
                       help='Author name')
@@ -383,7 +482,6 @@ A command-line interface to Google Scholar."""
         sys.exit(1)
 
     query = ' '.join(args)
-
     if options.csv:
         csv(query, author=options.author, count=options.count)
     elif options.csv_header:
@@ -391,5 +489,13 @@ A command-line interface to Google Scholar."""
     else:
         txt(query, author=options.author, count=options.count)
 
+####################################################################################################
+
 if __name__ == "__main__":
     main()
+
+####################################################################################################
+# 
+# End
+# 
+####################################################################################################

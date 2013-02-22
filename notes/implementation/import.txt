@@ -1,3 +1,27 @@
 -*- outline -*-
 
+* Manual Entry
+
+* Import Folder
+Get recursively files and filter by mime type -> Import File
+
+* Import File
+** Select importer by mime type
+** Is file already imported
+search (file path, checksum) -> nothing to do
+search (checksum) -> duplicate
+search (file path) -> overwritten
+
+* PDF Importer
+** get number of pages
+** get metadata and fill attributes
+** get text if number of pages < threshold
+*** infer title, author, journal, references -> fill missing attributes
+*** get words
+**** fill words in word database
+**** fill words for document
+**** infer language
+**** make keyword list
+** search document on internet to check attributes
+
 * End
