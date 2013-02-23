@@ -1,0 +1,320 @@
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdftex 2012.9.27)  12 JAN 2013 19:56
+entering extended mode
+ %&-line parsing enabled.
+**bibtex.tex
+(./bibtex.tex (/usr/share/texmf/tex/plain/base/webmac.tex
+\bak=\box16
+\bakk=\box17
+\ind=\count26
+\pagewidth=\dimen16
+\pageheight=\dimen17
+\fullpageheight=\dimen18
+\pageshift=\dimen19
+\cont=\write0
+\sbox=\box18
+\lbox=\box19
+) *1 [1{/usr/share/texmf/fonts/map/pdftex/updmap/pdftex.map}
+\openout0 = `CONTENTS.tex'.
+
+]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> ... 310, 311, 313, 321, 356, 368, 373\E
+                                                  Ts456
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.189 ...310, 311, 313, 321, 356, 368, 373\ETs456.
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.189 ...310, 311, 313, 321, 356, 368, 373\ETs456.
+                                                  
+? 
+[2] [3] *10 [4]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> ... 195, 219, 247, 290, 331, 337, 344\E
+                                                  Ts365
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.474 ...195, 219, 247, 290, 331, 337, 344\ETs365.
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.474 ...195, 219, 247, 290, 331, 337, 344\ETs365.
+                                                  
+? 
+[5] [6]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> ..., 72, 119, 125, 131, 162, 164, 196\E
+                                                  Ts292
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.564 ... 72, 119, 125, 131, 162, 164, 196\ETs292.
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.564 ... 72, 119, 125, 131, 162, 164, 196\ETs292.
+                                                  
+? 
+[7] *21
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> ...9, 64, 73, 105, 118, 130, 160, 291\E
+                                                  Ts332
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.600 ..., 64, 73, 105, 118, 130, 160, 291\ETs332.
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.600 ..., 64, 73, 105, 118, 130, 160, 291\ETs332.
+                                                  
+? 
+[8] [9] [10] [11] [12] [13] *36
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> 39, 58, 60\E
+                       Ts61
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.1135 \As39, 58, 60\ETs61.
+                           
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.1135 \As39, 58, 60\ETs61.
+                           
+? 
+[14] [15] [16] [17] *48 [18]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> ... 198, 265, 278, 300, 301, 303, 335\E
+                                                  Ts336
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.1449 ...98, 265, 278, 300, 301, 303, 335\ETs336.
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.1449 ...98, 265, 278, 300, 301, 303, 335\ETs336.
+                                                  
+? 
+[19] [20] [21] [22] *64 [23] [24] [25]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> 79, 334, 339\E
+                         Ts340
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.1970 \As79, 334, 339\ETs340.
+                              
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.1970 \As79, 334, 339\ETs340.
+                              
+? 
+[26] [27] [28] *80
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> ... 183, 184, 185, 186, 187, 228, 248\E
+                                                  Ts249
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.2140 \ETs249.
+               
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.2140 \ETs249.
+               
+? 
+[29] [30] [31] [32] [33] *97 [34]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> ... 203, 205, 210, 211, 212, 214, 215\E
+                                                  Ts217
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.2524 211, 212, 214, 215\ETs217.
+                                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.2524 211, 212, 214, 215\ETs217.
+                                 
+? 
+[35] [36] [37] *109 [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] *146
+[48] [49] [50] [51] [52] [53] [54] *163 [55] [56] [57] [58] [59] [60] [61]
+[62] [63] [64] [65] [66] [67] [68] [69] [70] [71] *218 [72] [73] [74] [75]
+[76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]
+[91] [92] [93] [94] [95] [96] [97] *290 [98] [99] [100] [101] [102] [103]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> ... 314, 315, 316, 317, 318, 320, 322\E
+                                                  Ts342
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.7145 ...14, 315, 316, 317, 318, 320, 322\ETs342.
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.7145 ...14, 315, 316, 317, 318, 320, 322\ETs342.
+                                                  
+? 
+[104] [105] [106] [107] [108] [109] [110] [111] [112] *331 [113] [114] [115]
+[116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127]
+[128]
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \cdot 
+\E->\cdot 
+          10^
+<argument> 369, 384, 397, 401, 404, 406, 418\E
+                                              Ts420
+\note ...ndent 2em\baselineskip 10pt\eightrm #1~#2
+                                                  .\par }
+l.8835 ...69, 384, 397, 401, 404, 406, 418\ETs420.
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \par 
+\note ...2em\baselineskip 10pt\eightrm #1~#2.\par 
+                                                  }
+l.8835 ...69, 384, 397, 401, 404, 406, 418\ETs420.
+                                                  
+? 
+[129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140]
+[141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152]
+[153] [154] [155] [156] [157] [158] [159] [160] [161] *455 [162] [163] [164]
+[165] [166] *467 [167] *468 Index: [168] [169] [170] [171] [172] [173] [174]
+[175] [176] [177] [178] [179] [180] [181] Section names: [182] [183] [184]
+[185] [186] Table of contents: (./CONTENTS.tex) [0] )</usr/share/texmf/fonts/ty
+pe1/bluesky/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmcsc10.pfb>
+</usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/typ
+e1/bluesky/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></us
+r/share/texmf/fonts/type1/bluesky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/blu
+esky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr9.pfb></usr/share/
+texmf/fonts/type1/bluesky/cm/cmsl10.pfb></usr/share/texmf/fonts/type1/bluesky/c
+m/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtex10.pfb></usr/share/t
+exmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/share/texmf/fonts/type1/bluesky/cm
+/cmtt10.pfb>
+Output written on bibtex.pdf (187 pages, 880456 bytes).
+PDF statistics:
+ 654 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
