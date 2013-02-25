@@ -2,7 +2,7 @@
  :mod:`FileDataBase`
 *********************
 
-.. automodule:: Babel.FileSystem.FileDataBase
+.. automodule:: Babel.DataBase.FileDataBase
    :members:
    :show-inheritance:
 

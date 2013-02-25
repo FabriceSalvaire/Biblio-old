@@ -3,6 +3,8 @@
 ***************
 
 .. toctree::
+  Config/Config
   Config/ConfigInstall
+  Config/Messages
 
 .. End

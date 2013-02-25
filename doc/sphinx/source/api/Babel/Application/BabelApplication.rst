@@ -2,7 +2,7 @@
  :mod:`BabelApplication`
 *************************
 
-.. automodule:: Babel.GUI.BabelApplication
+.. automodule:: Babel.Application.BabelApplication
    :members:
    :show-inheritance:
 
