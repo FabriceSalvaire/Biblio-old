@@ -1,0 +1,23 @@
+-*- outline -*-
+
+* previous page
+* current page number
+* of N
+* next page
+* go to first page
+* go to last page
+* previous view
+* next view
+* mouse
+* text selection
+* zoom selection
+* zoom fit width
+* zoom to fit page
+* suppress margin
+* one page, facing page, etc.
+* continous mode / single page
+* full screen
+* rotate left / right
+* find
+
+* End

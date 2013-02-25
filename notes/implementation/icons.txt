@@ -1,0 +1,25 @@
+/usr/share/evince/icons/hicolor/32x32/actions/object-rotate-right.png
+/usr/share/evince/icons/hicolor/scalable/actions/object-rotate-right.svg
+/usr/share/f-spot/icons/hicolor/32x32/actions/object-rotate-right.png
+/usr/share/f-spot/icons/hicolor/scalable/actions/object-rotate-right.svg
+/usr/share/gpicview/pixmaps/object-rotate-right.png
+/usr/share/icons/HighContrast/32x32/actions/object-rotate-right.png
+/usr/share/icons/HighContrast/scalable/actions/object-rotate-right.svg
+/usr/share/icons/gnome/32x32/actions/object-rotate-right.png
+/usr/share/icons/gnome/scalable/actions/object-rotate-right-symbolic.svg
+/usr/share/icons/oxygen/32x32/actions/object-rotate-right.png
+
+oxygen-icon-theme-4.9.5-1.fc17.noarch
+
+https://fedorahosted.org/fedora-kde-artwork
+Fedora 14 - Laughlin
+Fedora 15 - Lovelock
+Fedora 16 - Verne
+Fedora 17 - Beefy Miracle
+Fedora 18 - Spherical Cow
+
+/usr/share/kde4/apps/desktoptheme/default/metadata.desktop -> air from kde-runtime-4.9.5-1.fc17.x86_64
+http://techbase.kde.org/Development/Tutorials/Plasma/Theme
+http://techbase.kde.org/Development/Tutorials/Plasma/ThemeDetails
+http://api.kde.org/4.10-api/kdelibs-apidocs/kdeui/html/classKStyle.html
+http://blog.qt.digia.com/blog/2007/08/09/qt-invaded-by-aliens-the-end-of-all-flicker/
