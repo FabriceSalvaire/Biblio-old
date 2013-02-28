@@ -1,0 +1,10 @@
+# -*- outline -*-
+
+* Gant
+
+* Redmine
+How to synchronise MySQL ?
+ - backup 
+ - dump -> load
+
+* End

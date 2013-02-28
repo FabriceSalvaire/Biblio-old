@@ -1,0 +1,11 @@
+-*- outline -*-
+
+* Schema
+ - id
+ - name
+ - parent id = NULL
+
+* JSON
+json.dumps({'a':1, 'b':2}, sort_keys=True, indent=4)
+
+* End

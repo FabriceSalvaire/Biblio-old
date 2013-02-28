@@ -1,0 +1,48 @@
+# -*- outline -*-
+
+* How to do with Mupdf
+** debug XML metadata
+** get bounding-box, compute pixmap margin ?
+** cffi for pypy
+
+* Text extraction
+** get text blocks and styles
+** retrieve left/right, justified, centred line
+** reorder blocks per y => multi-column ambiguities !
+** map to opengl, rtree, selection tool
+
+* Get word list
+sort by frequency
+look digram, trigram etc ?
+
+* Infer language
+Take the N most frequent word and compute the argmax language.
+
+* Get keywords
+Keywords are the most frequent words except uninformative word like "the". Use dictionary to
+discard them.
+
+* Get Title
+Usually has these property:
+ - near the top, window/erf (sort lines to index position)
+ - large font size, use size distribution
+ - bold style sometime,
+ - centred, gaussian for barycenter / could be at right
+ - short word count, window/erf
+ 
+* Get Author
+Usually has these property:
+ - contains pattern like ',' '.' '-' 'and' 'et al'
+ - pattern like \w.
+ - most words are out of dictionary
+ - centred, gaussian for barycenter / could be at right
+ - short word count, window/erf
+ - can we use a dictionary ?
+
+* Get references
+Lines near the end of the form [N] ...
+
+* Get journal ID
+Look for pattern
+
+* End

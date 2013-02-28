@@ -1,0 +1,11 @@
+# -*- outline -*-
+
+* Exemples of bibo
+
+* Look Marcont
+
+* Look rdflib 
+
+* Queries
+
+* End

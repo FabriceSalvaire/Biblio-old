@@ -1,0 +1,63 @@
+# -*- outline -*-
+
+* Shasum Indexed Pool
+An sha256sum has 256 bit (more than 1e77 keys), so in hexadecimal 64 characters
+  8d10b6dd96c1a47aaf41c50f2f7cff6f66f03a58f7ae8587c27d33456a9ede1e
+We can create the following hierarchy:
+  8d/10/
+16**2 / 16**2 = 256 / 256 = 65536 sub-folders
+
+* Topical Hierarchy
+topic/topic/topic/file.pdf
+
+* Author Hierarchy
+
+* Standard File System
+
+* How to connect them
+** using hard-link
+but it is not portable across file-system
+** using symbolic link
+less magic than hard-link
+/!\ dolphin don't show preview
+** on Windows / MacOsX ?
+
+* Check
+Visit recursively the pool
+for each file we have
+ * a prefix path
+ * a path
+ * a path type (directory, file, symbolic link, hard-link)
+ * a file mime-type (from the path, except for indexed hierarchy)
+ * an inode
+ * a shasum
+ * a creation date
+ * a file size
+mark the file in the database (unix time of the check),
+then "unmarked" files are missing.
+
+For shasum indexed hierarchy, the path is a primary key (= shasum).
+** path in database: do nothing
+** path not in database: database is not coherent
+  search this file in the database
+   * if found ?
+   * not found ?
+
+For other hierarchy, the primary key are:
+ * the path: could be renamed
+ * the shasum: content could be updated
+ * the inode: could come from another file-system
+
+Pipeline
+Visit Source -> Get attributes -> Look for (inode -> path -> shasum)
+ -> matched
+ -> not matched
+ Compute the delta of (inode, path, shasum)
+ Update according rules
+
+* use user Exception 
+
+* Other file attribute
+For shared file hierarchy: owner/group, permission etc. = ACL
+
+* End
