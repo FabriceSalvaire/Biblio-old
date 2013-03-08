@@ -4,5 +4,7 @@
 
 .. toctree::
   Importer/Importer
+  Importer/ImporterRegistry
+  Importer/PdfImporter
 
 .. End

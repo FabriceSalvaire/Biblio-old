@@ -10,6 +10,7 @@
   Babel/FileSystem
   Babel/GUI
   Babel/Importer
+  Babel/Lexique
   Babel/Logging
   Babel/Pdf
   Babel/Tools

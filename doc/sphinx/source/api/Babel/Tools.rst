@@ -5,7 +5,9 @@
 .. toctree::
   Tools/AttributeDictionaryInterface
   Tools/BackTrace
+  Tools/Binning
   Tools/EnumFactory
+  Tools/Histogram
   Tools/Interval
   Tools/Math
   Tools/Object

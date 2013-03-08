@@ -1,0 +1,9 @@
+********************
+ :mod:`PdfImporter`
+********************
+
+.. automodule:: Babel.Importer.PdfImporter
+   :members:
+   :show-inheritance:
+
+.. End
