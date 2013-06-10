@@ -6,6 +6,7 @@
   Tools/AttributeDictionaryInterface
   Tools/BackTrace
   Tools/Binning
+  Tools/DictionaryTools
   Tools/EnumFactory
   Tools/Histogram
   Tools/Interval
