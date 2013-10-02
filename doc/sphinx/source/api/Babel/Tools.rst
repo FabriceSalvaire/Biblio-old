@@ -10,7 +10,6 @@
   Tools/EnumFactory
   Tools/Histogram
   Tools/Interval
-  Tools/LruCache
   Tools/Math
   Tools/Object
   Tools/Path
