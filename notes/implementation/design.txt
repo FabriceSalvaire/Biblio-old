@@ -89,7 +89,7 @@ use inode to register file
 else use file name, path -or- recompute checksum
 
 ** file attribute
-Not supported on NFS !
+Was not supported on NFS ! Now?
 
 > setfattr -n user.sha -v 1234 file1 
 setfattr: file1: Operation not supported
