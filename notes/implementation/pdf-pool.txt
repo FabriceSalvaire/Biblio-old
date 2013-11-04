@@ -1,5 +1,7 @@
 # -*- outline -*-
 
+-> Wiki
+
 * Shasum Indexed Pool
 An sha256sum has 256 bit (more than 1e77 keys), so in hexadecimal 64 characters
   8d10b6dd96c1a47aaf41c50f2f7cff6f66f03a58f7ae8587c27d33456a9ede1e
