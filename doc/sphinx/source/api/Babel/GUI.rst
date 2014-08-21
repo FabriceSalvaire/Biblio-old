@@ -10,6 +10,7 @@
   GUI/GuiApplicationBase
   GUI/MainWindowBase
   GUI/NewIssueForm
+  GUI/PdfBrowser
   GUI/PdfViewerMainWindow
   GUI/Widgets
   GUI/ui
