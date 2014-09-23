@@ -21,6 +21,5 @@
   Tools/Singleton
   Tools/Statistics
   Tools/Units
-  Tools/test
 
 .. End

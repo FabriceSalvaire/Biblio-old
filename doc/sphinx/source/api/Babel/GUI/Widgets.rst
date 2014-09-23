@@ -3,9 +3,9 @@
 ****************
 
 .. toctree::
-  Widgets/ColumnConstraintSolver
   Widgets/GrowingTextBrowser
   Widgets/IconLoader
+  Widgets/PathNavigator
   Widgets/RowLayoutManager
 
 .. End
