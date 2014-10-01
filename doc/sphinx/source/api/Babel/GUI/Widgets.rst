@@ -3,6 +3,7 @@
 ****************
 
 .. toctree::
+  Widgets/ColumnLayout
   Widgets/GrowingTextBrowser
   Widgets/IconLoader
   Widgets/PathNavigator

@@ -3,6 +3,7 @@
 *******************
 
 .. toctree::
+  FileSystem/DirectoryToc
   FileSystem/File
 
 .. End
