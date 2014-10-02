@@ -2,7 +2,7 @@
  :mod:`PdfViewerMainWindow`
 ****************************
 
-.. automodule:: Babel.GUI.PdfViewerMainWindow
+.. automodule:: Babel.GUI.PdfViewer.PdfViewerMainWindow
    :members:
    :show-inheritance:
 

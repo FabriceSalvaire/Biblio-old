@@ -2,7 +2,7 @@
  :mod:`BabelGuiApplication`
 ****************************
 
-.. automodule:: Babel.GUI.BabelGuiApplication
+.. automodule:: Babel.GUI.LibraryBrowser.BabelGuiApplication
    :members:
    :show-inheritance:
 

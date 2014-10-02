@@ -3,15 +3,14 @@
 ************
 
 .. toctree::
-  GUI/BabelGuiApplication
-  GUI/BabelMainWindow
   GUI/CriticalErrorForm
   GUI/EmailBugForm
   GUI/GuiApplicationBase
+  GUI/LibraryBrowser
   GUI/MainWindowBase
   GUI/NewIssueForm
   GUI/PdfBrowser
-  GUI/PdfViewerMainWindow
+  GUI/PdfViewer
   GUI/Widgets
   GUI/ui
 

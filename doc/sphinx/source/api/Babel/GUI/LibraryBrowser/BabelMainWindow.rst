@@ -2,7 +2,7 @@
  :mod:`BabelMainWindow`
 ************************
 
-.. automodule:: Babel.GUI.BabelMainWindow
+.. automodule:: Babel.GUI.LibraryBrowser.BabelMainWindow
    :members:
    :show-inheritance:
 
