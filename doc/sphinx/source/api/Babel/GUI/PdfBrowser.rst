@@ -7,6 +7,7 @@
   PdfBrowser/DirectorySelector
   PdfBrowser/DirectoryTocWidget
   PdfBrowser/DocumentDirectory
+  PdfBrowser/ImageViewer
   PdfBrowser/PdfBrowserApplication
   PdfBrowser/PdfBrowserMainWindow
 
