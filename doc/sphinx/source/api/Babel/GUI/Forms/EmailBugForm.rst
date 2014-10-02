@@ -2,7 +2,7 @@
  :mod:`EmailBugForm`
 *********************
 
-.. automodule:: Babel.GUI.EmailBugForm
+.. automodule:: Babel.GUI.Forms.EmailBugForm
    :members:
    :show-inheritance:
 

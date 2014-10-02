@@ -2,7 +2,7 @@
  :mod:`NewIssueForm`
 *********************
 
-.. automodule:: Babel.GUI.NewIssueForm
+.. automodule:: Babel.GUI.Forms.NewIssueForm
    :members:
    :show-inheritance:
 

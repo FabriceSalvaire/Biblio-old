@@ -3,12 +3,9 @@
 ************
 
 .. toctree::
-  GUI/CriticalErrorForm
-  GUI/EmailBugForm
-  GUI/GuiApplicationBase
+  GUI/Base
+  GUI/Forms
   GUI/LibraryBrowser
-  GUI/MainWindowBase
-  GUI/NewIssueForm
   GUI/PdfBrowser
   GUI/PdfViewer
   GUI/Widgets
