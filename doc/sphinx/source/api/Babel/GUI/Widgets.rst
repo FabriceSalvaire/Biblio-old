@@ -6,6 +6,7 @@
   Widgets/ColumnLayout
   Widgets/GrowingTextBrowser
   Widgets/IconLoader
+  Widgets/MessageBox
   Widgets/PathNavigator
   Widgets/RowLayoutManager
 
