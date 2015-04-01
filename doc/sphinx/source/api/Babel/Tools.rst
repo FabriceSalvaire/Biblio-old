@@ -5,13 +5,10 @@
 .. toctree::
   Tools/AttributeDictionaryInterface
   Tools/BackTrace
-  Tools/Binning
   Tools/Container
   Tools/DictionaryTools
   Tools/EnumFactory
-  Tools/Histogram
-  Tools/Interval
-  Tools/Math
+  Tools/IterTools
   Tools/Object
   Tools/Path
   Tools/Platform
@@ -19,7 +16,6 @@
   Tools/RedmineRest
   Tools/RevisionVersion
   Tools/Singleton
-  Tools/Statistics
   Tools/Units
 
 .. End

@@ -1,8 +1,8 @@
 ******************
- :mod:`Histogram`
+ :mod:`IterTools`
 ******************
 
-.. automodule:: Babel.Math.Histogram
+.. automodule:: Babel.Tools.IterTools
    :members:
    :show-inheritance:
 

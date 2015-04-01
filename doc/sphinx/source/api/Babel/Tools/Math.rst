@@ -2,7 +2,7 @@
  :mod:`Math`
 *************
 
-.. automodule:: Babel.Tools.Math
+.. automodule:: Babel.Math.Functions
    :members:
    :show-inheritance:
 

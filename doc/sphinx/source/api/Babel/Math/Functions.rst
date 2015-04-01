@@ -1,8 +1,8 @@
 ******************
- :mod:`Histogram`
+ :mod:`Functions`
 ******************
 
-.. automodule:: Babel.Math.Histogram
+.. automodule:: Babel.Math.Functions
    :members:
    :show-inheritance:
 

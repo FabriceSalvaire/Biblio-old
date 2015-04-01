@@ -12,6 +12,7 @@
   Babel/Importer
   Babel/Lexique
   Babel/Logging
+  Babel/Math
   Babel/Pdf
   Babel/Tools
   Babel/Version
