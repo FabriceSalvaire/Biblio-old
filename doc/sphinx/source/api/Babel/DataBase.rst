@@ -3,10 +3,12 @@
 *****************
 
 .. toctree::
-  DataBase/FileDataBase
+  DataBase/DataBase
+  DataBase/DocumentDataBase
+  DataBase/MysqlDataBase
   DataBase/SqlAlchemyBase
+  DataBase/SqlTableModel
   DataBase/SqliteDataBase
   DataBase/WordDataBase
-  DataBase/WordDocumentDataBase
 
 .. End
