@@ -13,6 +13,7 @@
   Babel/Lexique
   Babel/Logging
   Babel/Math
+  Babel/MuPdf
   Babel/Pdf
   Babel/Tools
   Babel/Version
