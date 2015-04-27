@@ -1,8 +1,8 @@
 ******************
- :mod:`ImagePage`
+ :mod:`PdfViewer`
 ******************
 
-.. automodule:: Babel.GUI.PdfViewer.ImagePage
+.. automodule:: Babel.GUI.PdfBrowser.PdfViewer
    :members:
    :show-inheritance:
 

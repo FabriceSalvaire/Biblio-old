@@ -3,7 +3,6 @@
 ******************
 
 .. toctree::
-  PdfViewer/ImagePage
   PdfViewer/InfoPage
   PdfViewer/PdfViewerMainWindow
   PdfViewer/TextPage

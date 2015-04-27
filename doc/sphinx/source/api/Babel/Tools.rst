@@ -9,6 +9,7 @@
   Tools/DictionaryTools
   Tools/EnumFactory
   Tools/IterTools
+  Tools/LruCache
   Tools/Object
   Tools/Path
   Tools/Platform
