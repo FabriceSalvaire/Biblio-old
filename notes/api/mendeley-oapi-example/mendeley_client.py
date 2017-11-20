@@ -124,7 +124,7 @@ class OAuthClient(object):
 
         if response.status_code == 503:
             raise Exception('Service unavailable')
-        
+
         responseToken = response.text
         token = oauth.Token.from_string(responseToken)
         return token

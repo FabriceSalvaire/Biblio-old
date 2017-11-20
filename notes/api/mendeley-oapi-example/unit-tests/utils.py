@@ -41,14 +41,14 @@ def get_config_file():
         _, file_ext = os.path.splitext(sys.argv[1])
         if file_ext == ".json":
             config_file = sys.argv[1]
-            del sys.argv[1]    
+            del sys.argv[1]
     return config_file
 
 class TemporaryDocument:
 
     def __init__(self, client):
         self.__client = client
-        self.__document = client.create_document(document={'type' : 'Book', 
+        self.__document = client.create_document(document={'type' : 'Book',
                                                            'title': 'Document creation test'})
         assert "document_id" in self.__document
 
@@ -57,7 +57,7 @@ class TemporaryDocument:
 
     def __del__(self):
         assert self.__client.delete_library_document(self.__document["document_id"])
-        
+
 def test_prompt():
     print "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     print "!! This test will reset the library of the account used for testing !!"

@@ -4,7 +4,7 @@ class SyncStatus:
     Deleted = 0
     Modified = 1
     New = 2
-    Synced = 3   
+    Synced = 3
 
     @staticmethod
     def to_str(status):
@@ -17,7 +17,7 @@ class SyncedObject:
 
     def __init__(self, obj, status=SyncStatus.New):
         self.reset(obj, status)
-        
+
     def reset(self, obj, status):
         self.changes = {}
         self.status = status
@@ -47,7 +47,7 @@ class SyncedObject:
         # TODO add some checking of the keys etc
         for key, value in change.items():
             self.changes[key] = value
-        
+
         self.status = SyncStatus.Modified
 
     def apply_changes(self):
@@ -77,24 +77,24 @@ class SyncedObject:
 
     def delete(self):
         self.status = SyncStatus.Deleted
-        
+
 class SyncedFolder(SyncedObject):
     pass
 
 class SyncedDocument(SyncedObject):
 
     document_fields = [
-        "abstract", "advisor", "applicationNumber", "articleColumn", "arxiv", 
-        "authors", "cast", "chapter", "citation_key", "city", "code", "codeNumber", 
-        "codeSection", "codeVolume", "committee", "counsel", "country", "date", 
-        "dateAccessed", "day", "department", "doi", "edition", "editors", "genre", 
-        "institution", "internationalAuthor", "internationalNumber", "internationalTitle", 
-        "internationalUserType", "isbn", "issn", "issue", "isRead", "isStarred", "keywords", 
-        "language", "lastUpdate", "legalStatus", "length", "medium", "month", "notes", 
-        "original_publication", "owner", "pages", "pmid", "producers", "publicLawNumber", 
-        "published_in", "publisher", "reprint_edition", "reviewedArticle", "revision", 
-        "sections", "series", "seriesEditor", "seriesNumber", "session", "short_title", 
-        "source_type", "tags", "time", "title", "translators", "type","userType", "volume", 
+        "abstract", "advisor", "applicationNumber", "articleColumn", "arxiv",
+        "authors", "cast", "chapter", "citation_key", "city", "code", "codeNumber",
+        "codeSection", "codeVolume", "committee", "counsel", "country", "date",
+        "dateAccessed", "day", "department", "doi", "edition", "editors", "genre",
+        "institution", "internationalAuthor", "internationalNumber", "internationalTitle",
+        "internationalUserType", "isbn", "issn", "issue", "isRead", "isStarred", "keywords",
+        "language", "lastUpdate", "legalStatus", "length", "medium", "month", "notes",
+        "original_publication", "owner", "pages", "pmid", "producers", "publicLawNumber",
+        "published_in", "publisher", "reprint_edition", "reviewedArticle", "revision",
+        "sections", "series", "seriesEditor", "seriesNumber", "session", "short_title",
+        "source_type", "tags", "time", "title", "translators", "type","userType", "volume",
         "website", "year"
         ]
 
@@ -112,7 +112,7 @@ class SyncedDocument(SyncedObject):
 class ConflictResolver:
 
     def resolve_both_updated(self, local_document, remote_document):
-        """Update local_document from remote_document as needed. 
+        """Update local_document from remote_document as needed.
            If the local_document status is modified after the resolution
            the changes will be applied to the remote_document in sync()
 
@@ -161,7 +161,7 @@ class SimpleConflictResolver(ConflictResolver):
                 if key not in local_changes:
                     # no conflict, no need to resolve anything
                     continue
-                
+
                 # the local and remote documents have modified the same field
                 keep_remote_version = self.resolve_conflict(key, local_changes[key], remote_value)
 
@@ -184,7 +184,7 @@ class SimpleConflictResolver(ConflictResolver):
             pass
 
     def resolve_conflict(self, key, local_version, remote_version):
-        # dumb "resolution", 
+        # dumb "resolution",
         return False
 
 class DummySyncedClient:
@@ -199,7 +199,7 @@ class DummySyncedClient:
 
     def sync(self):
         success = False
-        
+
         while True:
             # if not self.sync_folders():
             #     continue
@@ -210,14 +210,14 @@ class DummySyncedClient:
     def fetch_document(self, remote_id):
         details = self.client.document_details(remote_id)
         assert "error" not in details
-        assert details["id"] == remote_id  
+        assert details["id"] == remote_id
         return SyncedDocument(details, SyncStatus.Synced)
 
     def push_new_local_document(self, local_document):
         # create the local document on the remote
         existing_id = local_document.id()
 
-        # it's a new document, or the conflict resolver decided 
+        # it's a new document, or the conflict resolver decided
         # to keep the local version so needs to be reset
         response = self.client.create_document(document=local_document.to_json())
         assert "error" not in response
@@ -280,7 +280,7 @@ class DummySyncedClient:
 
                     if local_document.is_modified():
                         # both documents are modified, resolve the conflict
-                        # by handling the remote changes required and leave the local 
+                        # by handling the remote changes required and leave the local
                         # changes to be synced later
                         self.conflict_resolver.resolve_both_updated(local_document, remote_document)
                         assert isinstance(local_document, SyncedDocument)
@@ -308,7 +308,7 @@ class DummySyncedClient:
 
                     # all cases should have been handled
                     assert False
-    
+
         def sync_local_changes():
             # deal with local changes or remote deletion
             for doc_id in self.documents.keys():
@@ -319,17 +319,17 @@ class DummySyncedClient:
                 assert not local_document.is_new()
 
                 if doc_id not in remote_ids:
-                    # was deleted on the server         
+                    # was deleted on the server
                     if local_document.is_modified():
                         recreate_local = self.conflict_resolver.resolve_local_update_remote_delete(local_document)
                         if recreate_local:
                             remote_ids.append(self.push_new_local_document(local_document))
                             continue
                     del self.documents[doc_id]
-                    continue   
+                    continue
 
                 if local_document.is_synced():
-                    continue                 
+                    continue
 
                 if local_document.is_deleted():
                     assert self.client.delete_library_document(doc_id)
@@ -354,7 +354,7 @@ class DummySyncedClient:
                 assert doc_id > 0
             self.new_documents = []
 
-            
+
         sync_remote_changes()
         sync_local_changes()
         send_new_documents()
